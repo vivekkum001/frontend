@@ -6,7 +6,6 @@ import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
 import Order from './components/Order';
-import Loginsinup from './components/loginsinup';
 import KhatushyamPage from './components/KhatushyamPage';
 import KashiVishwanathPage from './components/KashiVishwanathPage';
 
@@ -21,7 +20,6 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/order" element={<Order />} />
-            <Route path="/loginsinup" element={<Loginsinup />} />
             <Route path="/khatushyam" element={<KhatushyamPage />} />
             <Route path="/kashivishwanath" element={<KashiVishwanathPage />} />
           </Routes>
