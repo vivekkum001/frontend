@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; 
 import { FaBars, FaTimes, FaUser, FaSignOutAlt } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logoi.png'; // ✅ Your logo
@@ -32,11 +32,11 @@ const Header = () => {
     <nav className="bg-gradient-to-r from-[#1f2937] via-[#111827] to-[#1a1f2d] py-4 sticky top-0 z-[1000] shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          {/* ✅ Logo Only */}
+          {/* ✅ Logo */}
           <div className="flex items-center">
             <img src={logo} alt="Logo" className="h-16 w-32" />
           </div>
-    
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6">
             {navLinks.map((text, i) => (
@@ -50,9 +50,9 @@ const Header = () => {
             ))}
           </div>
 
-          {/* Desktop Buttons */}
+          {/* Desktop - Only show user info & logout if logged in */}
           <div className="hidden md:flex gap-4 items-center">
-            {isLoggedIn ? (
+            {isLoggedIn && (
               <>
                 <span className="flex items-center gap-2 text-yellow-400">
                   <FaUser className="text-lg" />
@@ -65,19 +65,6 @@ const Header = () => {
                   <FaSignOutAlt />
                   Logout
                 </button>
-              </>
-            ) : (
-              <>
-                <Link to="/loginsinup">
-                  <button className="bg-transparent border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black px-4 py-1 rounded transition duration-200">
-                    Login
-                  </button>
-                </Link>
-                <Link to="/loginsinup">
-                  <button className="bg-yellow-400 text-black hover:bg-yellow-500 px-4 py-1 rounded transition duration-200">
-                    Sign Up
-                  </button>
-                </Link>
               </>
             )}
           </div>
@@ -107,36 +94,22 @@ const Header = () => {
               </Link>
             ))}
 
-            <div className="flex flex-col gap-4 mt-8">
-              {isLoggedIn ? (
-                <>
-                  <div className="flex items-center gap-3 text-yellow-400 py-2 border-t border-gray-700">
-                    <FaUser />
-                    <span className="font-medium">{userData?.name}</span>
-                  </div>
-                  <button
-                    onClick={handleLogout}
-                    className="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded transition duration-200"
-                  >
-                    <FaSignOutAlt />
-                    Logout
-                  </button>
-                </>
-              ) : (
-                <>
-                  <Link to="/loginsinup" onClick={() => setMobileMenuOpen(false)}>
-                    <button className="w-full bg-transparent border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black px-4 py-2 rounded transition duration-200">
-                      Login
-                    </button>
-                  </Link>
-                  <Link to="/loginsinup" onClick={() => setMobileMenuOpen(false)}>
-                    <button className="w-full bg-yellow-400 text-black hover:bg-yellow-500 px-4 py-2 rounded transition duration-200">
-                      Sign Up
-                    </button>
-                  </Link>
-                </>
-              )}
-            </div>
+            {/* Mobile - Only show user info & logout if logged in */}
+            {isLoggedIn && (
+              <div className="flex flex-col gap-4 mt-8">
+                <div className="flex items-center gap-3 text-yellow-400 py-2 border-t border-gray-700">
+                  <FaUser />
+                  <span className="font-medium">{userData?.name}</span>
+                </div>
+                <button
+                  onClick={handleLogout}
+                  className="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded transition duration-200"
+                >
+                  <FaSignOutAlt />
+                  Logout
+                </button>
+              </div>
+            )}
           </div>
         </div>
       )}
