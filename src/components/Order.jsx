@@ -22,7 +22,7 @@ function Profile() {
     district: 'Nalanda',
     state: 'Bihar',
     temple: '',
-    amount: '251',
+    amount: '351',
     paymentRefNo: ''
   });
 
@@ -61,7 +61,7 @@ function Profile() {
   }, [timer, showQRCode]);
 
   const handlePrasadSelection = (type) => {
-    const amount = type === 'normal' ? '251' : '501';
+    const amount = type === 'normal' ? '351' : '551';
 
     setSelectedPrasadType(type);
     setShowQRCode(true);
@@ -90,7 +90,7 @@ function Profile() {
     }
 
     if (!formData.paymentRefNo.trim()) {
-      alert('Please enter payment reference number');
+      alert('Please enter payment reference number,Utr no,Transaction id no');
       setIsSubmitting(false);
       return;
     }
@@ -352,5 +352,6 @@ function Profile() {
     </div>
   );
 }
+
 
 export default Profile;
