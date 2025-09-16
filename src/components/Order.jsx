@@ -42,7 +42,7 @@ function Profile() {
     setSelectedPrasadType(type);
     setShowQRCode(true);
     setShowForm(false);
-    setTimer(60);
+    setTimer(90);
     setFormData({
       ...formData,
       amount: amount
@@ -118,7 +118,7 @@ function Profile() {
             Normal Prasad
           </h2>
           <div className="text-center text-xl mb-4">
-            <span className="text-green-700">₹251</span>
+            <span className="text-green-700">₹351</span>
           </div>
           {selectedPrasadType === 'normal' && showQRCode && (
             <div className="text-center">
@@ -139,7 +139,7 @@ function Profile() {
             Special Prasad
           </h2>
           <div className="text-center text-xl mb-4">
-            <span className="text-green-700">₹501</span>
+            <span className="text-green-700">₹551</span>
           </div>
           {selectedPrasadType === 'special' && showQRCode && (
             <div className="text-center">
@@ -315,3 +315,4 @@ function Profile() {
 }
 
 export default Profile;
+
