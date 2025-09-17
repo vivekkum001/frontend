@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import qrCodeImage from '../assets/qrphone.jpg';
-import qrCodeImage2 from '../assets/qrphone.jpg';
+import qrCodeImage from '../assets/351.jpg';
+import qrCodeImage2 from '../assets/551.jpg';
 
 function Profile() {
   const [showQRCode, setShowQRCode] = useState(false);
@@ -315,4 +315,5 @@ function Profile() {
 }
 
 export default Profile;
+
 
