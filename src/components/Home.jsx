@@ -120,16 +120,16 @@ const Home = () => {
 
   // Prasad items data
   const prasadItems = [
-    { id: 1, name: "Ram Mandir Laddu", price: 251, temple: "Ram Mandir", rating: 4.8 },
-    { id: 2, name: "Tirupati Laddus", price: 251, temple: "Tirupati Balaji", rating: 4.9 },
-    { id: 3, name: "Kashi Prasad Set", price: 251, temple: "Kashi Vishwanath", rating: 4.7 },
-    { id: 4, name: "Pashupati Special", price: 251, temple: "Pashupatinath", rating: 4.5 },
-    { id: 5, name: "Vaishno Devi Dry Fruits", price: 251, temple: "Vaishno Devi", rating: 4.6 },
-    { id: 6, name: "Khatushyam Prasad", price: 251, temple: "Khatushyam", rating: 4.4 },
-    { id: 7, name: "Golden Temple Kara Prasad", price:251, temple: "Golden Temple", rating: 4.9 },
-    { id: 8, name: "Meenakshi Temple Sweets", price: 251, temple: "Meenakshi Temple", rating: 4.3 },
-    { id: 9, name: "Jagannath Mahaprasad", price: 251, temple: "Jagannath Temple", rating: 4.8 },
-    { id: 10, name: "Somnath Special Prasad", price: 251, temple: "Somnath Temple", rating: 4.7 }
+    { id: 1, name: "Ram Mandir Laddu", price: 351, temple: "Ram Mandir", rating: 4.8 },
+    { id: 2, name: "Tirupati Laddus", price: 351, temple: "Tirupati Balaji", rating: 4.9 },
+    { id: 3, name: "Kashi Prasad Set", price: 351, temple: "Kashi Vishwanath", rating: 4.7 },
+    { id: 4, name: "Pashupati Special", price: 351, temple: "Pashupatinath", rating: 4.5 },
+    { id: 5, name: "Vaishno Devi Dry Fruits", price: 351, temple: "Vaishno Devi", rating: 4.6 },
+    { id: 6, name: "Khatushyam Prasad", price: 351, temple: "Khatushyam", rating: 4.4 },
+    { id: 7, name: "Golden Temple Kara Prasad", price:351, temple: "Golden Temple", rating: 4.9 },
+    { id: 8, name: "Meenakshi Temple Sweets", price: 351, temple: "Meenakshi Temple", rating: 4.3 },
+    { id: 9, name: "Jagannath Mahaprasad", price: 351, temple: "Jagannath Temple", rating: 4.8 },
+    { id: 10, name: "Somnath Special Prasad", price: 351, temple: "Somnath Temple", rating: 4.7 }
   ];
 
   // Auto-rotate temple images every 5 seconds
@@ -527,5 +527,6 @@ const Home = () => {
     </div>
   );
 };
+
 
 export default Home;
