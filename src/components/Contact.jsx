@@ -33,11 +33,12 @@ const Contact = () => {
           />
           
           <ContactCard 
-            icon={<FaComments size={24} className="mr-2" />} 
-            title="Live Chat"
-            description="Available 24/7 for instant support"
-            button="Start Live Chat"
-          />
+  icon={<FaComments size={24} className="mr-2" />} 
+  title="Live Chat"
+  description="Available 24/7 for instant support"
+  button="Start Live Chat"
+  link="https://wa.me/message/JMWVHTFBCZVAD1"   // replace with your WhatsApp number
+/>
         </div>
         
         <h3 className="text-xl md:text-2xl font-bold mb-6 text-orange-500">
@@ -123,5 +124,6 @@ const ContactCard = ({ icon, title, items, description, button }) => {
     </div>
   );
 };
+
 
 export default Contact;
