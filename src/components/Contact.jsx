@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import { FaEnvelope, FaPhone, FaComments } from 'react-icons/fa';
 
 const Contact = () => {
@@ -8,11 +8,11 @@ const Contact = () => {
         <h2 className="text-2xl md:text-3xl font-bold mb-8 text-orange-500 border-b border-gray-700 pb-3">
           Contact Us
         </h2>
-        
+
         <p className="text-gray-300 mb-8 leading-relaxed">
           Have questions or need assistance? Our support team is available 24/7 to help you with any issues.
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           <ContactCard 
             icon={<FaEnvelope size={24} className="mr-2" />} 
@@ -33,18 +33,18 @@ const Contact = () => {
           />
           
           <ContactCard 
-  icon={<FaComments size={24} className="mr-2" />} 
-  title="Live Chat"
-  description="Available 24/7 for instant support"
-  button="Start Live Chat"
-  link="https://wa.me/message/JMWVHTFBCZVAD1"   // replace with your WhatsApp number
-/>
+            icon={<FaComments size={24} className="mr-2" />} 
+            title="Live Chat"
+            description="Available 24/7 for instant support"
+            button="Start Live Chat"
+            link="https://wa.me/message/JMWVHTFBCZVAD1"  // ✅ your WhatsApp link
+          />
         </div>
-        
+
         <h3 className="text-xl md:text-2xl font-bold mb-6 text-orange-500">
           Send Us a Message
         </h3>
-        
+
         <form className="space-y-6">
           <div className="space-y-2">
             <label className="block font-medium text-gray-300">Your Name</label>
@@ -94,7 +94,7 @@ const Contact = () => {
   );
 };
 
-const ContactCard = ({ icon, title, items, description, button }) => {
+const ContactCard = ({ icon, title, items, description, button, link }) => {
   return (
     <div className="bg-[rgba(26,31,45,0.6)] rounded-xl p-6">
       <h3 className="text-lg md:text-xl font-bold mb-4 text-orange-500 flex items-center">
@@ -117,14 +117,23 @@ const ContactCard = ({ icon, title, items, description, button }) => {
       )}
       
       {button && (
-        <button className="bg-gradient-to-r from-orange-500 to-orange-700 text-white py-2 px-4 rounded-lg font-medium w-full">
-          {button}
-        </button>
+        link ? (
+          <a 
+            href={link} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block text-center bg-gradient-to-r from-orange-500 to-orange-700 text-white py-2 px-4 rounded-lg font-medium w-full hover:opacity-90 transition"
+          >
+            {button}
+          </a>
+        ) : (
+          <button className="bg-gradient-to-r from-orange-500 to-orange-700 text-white py-2 px-4 rounded-lg font-medium w-full">
+            {button}
+          </button>
+        )
       )}
     </div>
   );
 };
 
-
 export default Contact;
-
