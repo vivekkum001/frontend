@@ -28,7 +28,7 @@ const Contact = () => {
             title="Phone Support"
             items={[
               { label: 'India Toll-Free', value: '8510027016' },
-              { label: 'International', value: '+91 98765 43210' }
+              { label: 'International', value: '+91 7462881297' }
             ]}
           />
           
@@ -137,4 +137,5 @@ const ContactCard = ({ icon, title, items, description, button, link }) => {
 };
 
 export default Contact;
+
 
