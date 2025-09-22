@@ -27,7 +27,7 @@ const Contact = () => {
             icon={<FaPhone size={24} className="mr-2" />} 
             title="Phone Support"
             items={[
-              { label: 'India Toll-Free', value: '1800-123-4567' },
+              { label: 'India Toll-Free', value: '8510027016' },
               { label: 'International', value: '+91 98765 43210' }
             ]}
           />
@@ -137,3 +137,4 @@ const ContactCard = ({ icon, title, items, description, button, link }) => {
 };
 
 export default Contact;
+
