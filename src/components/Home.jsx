@@ -18,7 +18,7 @@ import badrinathTempleImage from '../assets/badrinathTempleImage.jpg';
 import kedarnathTempleImage from '../assets/kedarnathTempleImage.jpg';
 
 // Import your video file from assets (replace with your actual video path)
-import adVideoFile from '../assets/shyam1.mp4';
+import adVideoFile from '../assets/.mp4';
 
 const Home = () => {
   const [currentTempleIndex, setCurrentTempleIndex] = useState(0);
@@ -530,4 +530,5 @@ const Home = () => {
 
 
 export default Home;
+
 
